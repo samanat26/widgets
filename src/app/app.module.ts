@@ -8,6 +8,9 @@ import { CtaComponent } from './widgets/cta/cta/cta.component';
 import { AnimatedCardsComponent } from './widgets/cards/animated-cards/animated-cards.component';
 import { PosterCardComponent } from './widgets/cards/poster-card/poster-card.component';
 import { ErrorPageComponent } from './widgets/error-page/error-page/error-page.component';
+import { PortfolioComponent } from './widgets/portfolio/portfolio.component';
+import { ContactUsComponent } from './widgets/contact-us/contact-us.component';
+import { BarComponent } from './widgets/bar/bar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { ErrorPageComponent } from './widgets/error-page/error-page/error-page.c
     CtaComponent,
     AnimatedCardsComponent,
     PosterCardComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    PortfolioComponent,
+    ContactUsComponent,
+    BarComponent
   ],
   imports: [
     BrowserModule,

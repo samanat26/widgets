@@ -7,40 +7,26 @@ import { Component } from '@angular/core';
 })
 export class CtaComponent {
   ngOnInit() {
-    // this.swiper();
+    this.func();
   }
+  func() {
+    const inputs = document.querySelectorAll('.input');
 
-  // swiper(){
-  //   var swiper = new Swiper('.swiper', {
-  //     effect: 'coverflow',
-  //     grabCursor: true,
-  //     centeredSlides: true,
-  //     coverflowEffect: {
-  //       rotate: 0,
-  //       stretch: 0,
-  //       depth: 100,
-  //       modifier: 3,
-  //       slideShadows: true,
-  //     },
-  //     loop: true,
-  //     pagination: {
-  //       el: '.swiper-pagination',
-  //       clickable: true,
-  //     },
-  //     breakpoints: {
-  //       640: {
-  //         slidesPerView: 2,
-  //       },
-  //       768: {
-  //         slidesPerView: 1,
-  //       },
-  //       1024: {
-  //         slidesPerView: 2,
-  //       },
-  //       1560: {
-  //         slidesPerView: 3,
-  //       },
-  //     },
-  //   });
-  // }
+    function focusFunc(this: any) {
+      let parent = this.parentNode;
+      parent.classList.add('focus');
+    }
+
+    function blurFunc(this: any) {
+      let parent = this.parentNode;
+      if (this.value == '') {
+        parent.classList.remove('focus');
+      }
+    }
+
+    inputs.forEach((input) => {
+      input.addEventListener('focus', focusFunc);
+      input.addEventListener('blur', blurFunc);
+    });
+  }
 }
